@@ -24,7 +24,7 @@ def click_image(zmienna1, zmienna2, mapa):
         mapa[zmienna2][zmienna1], mapa[zmienna2][zmienna1 - 1] = mapa[zmienna2][zmienna1 - 1], mapa[zmienna2][zmienna1]
     elif zmienna1 + 1 <= 2 and mapa[zmienna2][zmienna1 + 1] == 8:
         mapa[zmienna2][zmienna1], mapa[zmienna2][zmienna1 + 1] = mapa[zmienna2][zmienna1 + 1], mapa[zmienna2][zmienna1]
-
+        
 
 def random_image(mapa):
     for el in range(1000):
@@ -32,7 +32,7 @@ def random_image(mapa):
         zmienna2 = random.randint(0, 2)
         click_image(zmienna1, zmienna2, mapa)
 
-
+#nie wiem czy coś widać
 # zdjęcie do układanki
 img = pygame.image.load('kotzkapusta.jpg')
 

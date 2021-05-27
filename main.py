@@ -15,7 +15,7 @@ img_map = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
 win_map = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
 
 
-def click_image(zmienna1, zmienna2, mapa):
+def click_image(zmienna1, zmienna2, mapa): #jakbyś mogła rozpisać, co ten fragment robi, bo nie potrafię sobie zwizualizować
     if zmienna2 - 1 >= 0 and mapa[zmienna2 - 1][zmienna1] == 8:
         mapa[zmienna2][zmienna1], mapa[zmienna2 - 1][zmienna1] = mapa[zmienna2 - 1][zmienna1], mapa[zmienna2][zmienna1]
     elif zmienna2 + 1 <= 2 and mapa[zmienna2 + 1][zmienna1] == 8:
@@ -26,13 +26,12 @@ def click_image(zmienna1, zmienna2, mapa):
         mapa[zmienna2][zmienna1], mapa[zmienna2][zmienna1 + 1] = mapa[zmienna2][zmienna1 + 1], mapa[zmienna2][zmienna1]
         
 
-def random_image(mapa):
+def random_image(mapa): #czym jest mapa?
     for el in range(1000):
         zmienna1 = random.randint(0, 2)
         zmienna2 = random.randint(0, 2)
         click_image(zmienna1, zmienna2, mapa)
 
-#nie wiem czy coś widać
 # zdjęcie do układanki
 img = pygame.image.load('kotzkapusta.jpg')
 
@@ -41,7 +40,7 @@ random_image(img_map)
 s.fill((25, 35, 45))
 s.blit(img, (800, 0))
 
-for zmienna2 in range(3):
+for zmienna2 in range(3): #co tu się dzieje?
     for zmienna1 in range(3):
         el = img_map[zmienna2][zmienna1]
         if el == 8:          # 8No need to place pictures
